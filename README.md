@@ -1,17 +1,49 @@
-## Demo web y publicación en Render
-
-Sitio estático interactivo disponible en `public/`; contiene exclusivamente un simulador de variables sintéticas y nunca representa una predicción operativa.
-
-[Publicar en Render](https://render.com/deploy?repo=https://github.com/wiss02/andes-risk-ai)
-
-Al iniciar el despliegue, revisa el servicio `andes-risk-ai` y aprueba su creación en tu cuenta Render. La configuración está en `render.yaml`, que publica la carpeta `public`. Un sitio Render solo tendrá URL pública después de que se apruebe y finalice la implementación.
-
 # ANDES-RISK AI
 
-**Independent, non-commercial research prototype for rainfall-related landslide analysis in Bolivia.**
+**Investigación abierta sobre IA y análisis experimental de deslizamientos en Bolivia.**  
+**Open research on AI and experimental landslide analysis in Bolivia.**
 
-**Author:** Wilson Rene Chura Quispe  
-**Status:** early-stage independent, student-led research initiative — **not** an official UNED laboratory, research group, or operational emergency-warning service.
+[![Python tests](https://github.com/wiss02/andes-risk-ai/actions/workflows/tests.yml/badge.svg)](https://github.com/wiss02/andes-risk-ai/actions/workflows/tests.yml)
+[![Live demo](https://img.shields.io/badge/Live_demo-Render-84e5b3)](https://andes-risk-ai.onrender.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Stage: prototype](https://img.shields.io/badge/Stage-Experimental-orange)](docs/RESEARCH_PROTOCOL.md)
+
+**[🌐 Ver demostración web](https://andes-risk-ai.onrender.com/)** · **[🔬 Protocolo científico](docs/RESEARCH_PROTOCOL.md)** · **[🛰 Fuentes de datos](docs/DATA_SOURCES.md)** · **[🏗 Arquitectura](docs/ARCHITECTURE.md)** · **[🤝 Contribuir](CONTRIBUTING.md)**
+
+> **Aviso científico:** la versión actual emplea únicamente datos sintéticos; no es un sistema de predicción real, de gestión de emergencias ni de alertas para Bolivia. Es una iniciativa independiente, sin afiliación oficial a UNED o SIMDA.
+
+## ¿Qué problema investigamos?
+
+¿Cómo podemos evaluar de manera reproducible métodos computacionales para estudiar la relación entre precipitaciones, relieve y registros de deslizamientos, y qué aportan los agentes de IA como asistentes de investigación?
+
+## Estado de desarrollo
+
+| Disponible actualmente | Investigación futura |
+| --- | --- |
+| Generador reproducible de datos sintéticos | Integración de datos satelitales con procedencia |
+| Validación CSV y regresión logística de referencia | Comparación con datos de eventos verificados |
+| División temporal entrenamiento/prueba | Validación espacial, calibración e incertidumbre |
+| Métricas y pruebas de software | Agentes auditores y análisis geoespacial |
+| Página interactiva estática en Render | Mapas científicos contrastados por expertos |
+
+**Los objetivos futuros no son funciones terminadas.**
+
+## Reproducir el prototipo (Python 3.10+)
+
+```bash
+git clone https://github.com/wiss02/andes-risk-ai.git
+cd andes-risk-ai
+python -m pip install -e .
+python -m andes_risk generate-demo --output data/synthetic_demo.csv --seed 42
+python -m andes_risk evaluate --input data/synthetic_demo.csv --output results/metrics.json
+python -m unittest discover -s tests -v
+```
+
+**Documento de investigación:** [hipótesis, metodología, sesgos y controles de calidad](docs/RESEARCH_PROTOCOL.md).  
+**Procedencia de datos:** [fuentes candidatas y criterios de aceptación](docs/DATA_SOURCES.md).  
+**Arquitectura:** [flujo disponible y propuesta futura diferenciados](docs/ARCHITECTURE.md).
+
+---
 
 ## Research question
 
