@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: andes-risk-ai
+    runtime: static
+    repo: https://github.com/wiss02/andes-risk-ai
+    branch: main
+    buildCommand: echo "ANDES-RISK AI static site ready"
+    staticPublishPath: ./public
+    headers:
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
