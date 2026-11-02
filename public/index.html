@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ANDES-RISK AI — plataforma experimental de investigación de lluvias, laderas e inteligencia artificial en los Andes.">
+  <meta name="theme-color" content="#081b26">
+  <title>ANDES-RISK AI | Laboratorio experimental</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <div class="notice"><span class="notice-icon">!</span> DEMOSTRACIÓN CIENTÍFICA — DATOS 100% SINTÉTICOS. NO ES UN SISTEMA DE ALERTA NI DE PREDICCIÓN OPERATIVA.</div>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="ANDES-RISK AI, inicio"><span class="brand-logo"><svg viewBox="0 0 44 44" aria-hidden="true"><path d="M6 34 17 11l7 13 5-8 10 18H6Z" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linejoin="round"/><circle cx="32" cy="10" r="3" fill="#9ef3c2"/></svg></span><span>ANDES<span class="brand-sep">/</span>RISK <small>AI RESEARCH</small></span></a>
+    <nav aria-label="Navegación principal"><a href="#investigacion">Investigación</a><a href="#laboratorio">Laboratorio</a><a href="#metodologia">Metodología</a></nav>
+    <a class="nav-repo" href="https://github.com/wiss02/andes-risk-ai" target="_blank" rel="noopener noreferrer">Ver GitHub <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span> INICIATIVA INDEPENDIENTE · BOLIVIA</div>
+        <h1>Comprender el territorio.<br><em>Investigar el riesgo.</em></h1>
+        <p>Una iniciativa de investigación abierta que explora cómo la inteligencia artificial, la ciencia de datos y la observación terrestre pueden ayudar a estudiar los deslizamientos asociados a la lluvia en regiones andinas.</p>
+        <div class="hero-actions"><a class="button primary" href="#laboratorio">Explorar el simulador <span>↗</span></a><a class="button secondary" href="#metodologia">Nuestra metodología <span>↓</span></a></div>
+        <div class="hero-facts"><span><strong>01</strong> Prototipo público</span><span><strong>03</strong> Variables de prueba</span><span><strong>100%</strong> Código abierto</span></div>
+      </div>
+      <div class="terrain" aria-label="Ilustración conceptual de curvas de nivel de una ladera andina; no es un mapa geográfico real">
+        <svg viewBox="0 0 500 490" role="img" aria-label="Curvas de nivel ilustrativas sobre una montaña">
+          <defs><linearGradient id="topo" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#153f4a"/><stop offset="1" stop-color="#06222b"/></linearGradient></defs>
+          <rect width="500" height="490" fill="url(#topo)"/>
+          <g fill="none" stroke="#80aeaa" stroke-opacity=".36" stroke-width="1.1">
+            <path d="M-90 220C0 150 54 247 130 181S264 26 359 72 450 156 580 85"/>
+            <path d="M-70 256C14 186 83 287 158 214S262 62 342 102 456 192 560 128"/>
+            <path d="M-75 300C44 215 94 332 176 251S267 105 340 136 445 219 566 172"/>
+            <path d="M-58 347C50 270 119 376 209 288S267 154 346 173 444 257 567 215"/>
+            <path d="M-47 390C65 316 144 409 226 328S292 204 361 209 445 302 568 266"/>
+            <path d="M-43 432C72 365 167 462 257 367S302 241 368 249 449 358 557 310"/>
+            <path d="M-59 469C112 403 195 504 280 409S323 277 390 282 471 404 559 360"/>
+            <path d="M-90 182C-3 104 44 206 109 146S263-12 374 33 462 122 558 41"/>
+            <path d="M-108 142C-6 51 54 159 103 107S274-43 379-15 475 80 563-2"/>
+          </g>
+          <g fill="none" stroke="#a5e7cb" stroke-opacity=".9" stroke-width="2"><path d="M-20 284C55 240 89 313 163 248S285 68 364 120 459 211 518 180"/></g>
+          <path d="M129 347C189 289 225 342 277 250S365 185 424 231" fill="none" stroke="#d3ffbc" stroke-width="2" stroke-dasharray="7 8"/>
+          <circle cx="278" cy="250" r="7" fill="#b5ffd0" stroke="#0b3438" stroke-width="3"/>
+          <circle cx="365" cy="185" r="5" fill="#b5ffd0"/>
+          <g font-family="system-ui, sans-serif" fill="#d0f9e5"><text x="27" y="52" font-size="11" letter-spacing="2">ANDEAN TERRAIN / CONCEPTUAL</text><text x="26" y="464" font-size="11">16.5° S — ILUSTRACIÓN, NO COORDENADAS REALES</text></g>
+          <rect x="270" y="35" width="195" height="56" rx="9" fill="#0b2832" stroke="#47766f"/><text x="288" y="59" fill="#b9e9d9" font-family="system-ui" font-size="11">ANÁLISIS ESPACIAL</text><text x="288" y="77" fill="#ffffff" font-family="system-ui" font-weight="600" font-size="14">Terreno · Lluvia · Datos</text>
+        </svg>
+        <div class="terrain-label"><span class="signal"></span> SISTEMA DE INVESTIGACIÓN V0.1</div>
+      </div>
+    </section>
+
+    <section class="intro wrap" id="investigacion">
+      <div class="section-heading"><span class="kicker">01 / EL PROBLEMA</span><h2>De los datos a<br><span>preguntas verificables.</span></h2></div>
+      <div class="intro-body"><p>La relación entre lluvia, topografía y deslizamientos es compleja. ANDES-RISK AI propone estudiar flujos reproducibles para preparar datos, crear modelos de referencia y comprobar hipótesis bajo condiciones controladas.</p><p>Este proyecto está en fase inicial: <strong>todavía no utiliza observaciones verificadas de Bolivia ni ha validado modelos de amenaza reales.</strong></p></div>
+    </section>
+
+    <section class="lab-section" id="laboratorio">
+      <div class="wrap">
+        <div class="lab-head"><div><span class="kicker">02 / EXPERIMENTO INTERACTIVO</span><h2>Laboratorio de <span>simulación.</span></h2><p>Modifica las tres variables y observa cómo responde una <strong>función matemática ilustrativa</strong>. Los números son sintéticos: no representan ninguna zona ni un nivel de riesgo verdadero.</p></div><span class="lab-sticker"><span class="live-dot"></span> DEMO · SIN DATOS REALES</span></div>
+        <div class="dashboard">
+          <div class="controls panel">
+            <div class="panel-title"><span class="panel-index">A / 01</span><h3>Variables de entrada</h3><p>Valores simulados para explorar sensibilidad.</p></div>
+            <div class="control"><div class="control-top"><label for="rain24">Precipitación en 24 horas</label><output id="rain24Value" for="rain24">42 mm</output></div><input id="rain24" type="range" min="0" max="150" step="1" value="42"><div class="range-label"><span>0 mm</span><span>150 mm</span></div></div>
+            <div class="control"><div class="control-top"><label for="rain7">Precipitación acumulada en 7 días</label><output id="rain7Value" for="rain7">135 mm</output></div><input id="rain7" type="range" min="0" max="400" step="1" value="135"><div class="range-label"><span>0 mm</span><span>400 mm</span></div></div>
+            <div class="control"><div class="control-top"><label for="slope">Pendiente del terreno</label><output id="slopeValue" for="slope">32°</output></div><input id="slope" type="range" min="0" max="60" step="1" value="32"><div class="range-label"><span>0°</span><span>60°</span></div></div>
+            <button class="reset" id="reset" type="button">↺ Restablecer parámetros</button>
+          </div>
+          <div class="output panel">
+            <div class="panel-title"><span class="panel-index">B / 01</span><h3>Respuesta del modelo sintético</h3><p>Función logística de demostración, no calibrada.</p></div>
+            <div class="score-wrap"><div class="score" id="score" aria-live="polite">48<span>%</span></div><div class="score-caption">ÍNDICE SINTÉTICO · NO ES PROBABILIDAD REAL</div></div>
+            <div class="meter"><div id="meterFill"></div></div>
+            <div class="output-grid"><div><small>MODELO</small><strong>Función logística</strong></div><div><small>FUENTE</small><strong>Variables inventadas</strong></div></div>
+            <div class="warning-box"><strong>Uso exclusivo de demostración.</strong> Este índice no predice deslizamientos, no usa mediciones reales y jamás debe utilizarse para decisiones de seguridad.</div>
+          </div>
+        </div>
+        <div class="timeline panel">
+          <div class="timeline-title"><div><span class="panel-index">C / 01</span><h3>Serie temporal sintética</h3></div><span class="subtle">12 periodos ilustrativos · no observaciones</span></div>
+          <svg id="chart" viewBox="0 0 900 220" role="img" aria-label="Gráfico ilustrativo de una serie temporal sintética de precipitaciones"><text x="30" y="100">Cargando gráfico…</text></svg>
+          <div class="chart-footer"><span><i class="legend"></i> Precipitación sintética</span><span>Unidad: mm / periodo</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="method wrap" id="metodologia">
+      <div class="section-heading"><span class="kicker">03 / METODOLOGÍA ABIERTA</span><h2>Ciencia antes que<br><span>promesas.</span></h2></div>
+      <div class="method-grid">
+        <article><span>01</span><h3>Datos con procedencia</h3><p>Documentar licencias, cobertura y limitaciones de datos abiertos antes de afirmar hallazgos.</p></article>
+        <article><span>02</span><h3>Evaluación temporal</h3><p>Separar entrenamiento y prueba cronológicamente para reducir fugas de información.</p></article>
+        <article><span>03</span><h3>Modelos transparentes</h3><p>Comparar métodos interpretables con alternativas más complejas y reportar incertidumbre.</p></article>
+        <article><span>04</span><h3>Reproducibilidad</h3><p>Publicar scripts, pruebas, configuraciones y resultados verificables una vez obtenidos.</p></article>
+      </div>
+      <div class="research-note"><div><span class="kicker">ESTADO DEL PROYECTO</span><h3>En construcción, públicamente.</h3><p>El repositorio contiene un prototipo Python para clasificar eventos sintéticos y evaluar métricas experimentales. La web muestra una visualización independiente; aún no conecta con el código Python ni dispone de un backend o una API.</p></div><a class="button light" target="_blank" rel="noopener noreferrer" href="https://github.com/wiss02/andes-risk-ai">Explorar código fuente ↗</a></div>
+    </section>
+  </main>
+  <footer><div class="wrap footer-inner"><div class="brand footer-brand">ANDES<span class="brand-sep">/</span>RISK <small>AI RESEARCH</small></div><p>Proyecto de investigación independiente · Sin afiliación oficial a UNED o SIMDA · © 2026</p><a href="#inicio">Volver arriba ↑</a></div></footer>
+</body>
+</html>
