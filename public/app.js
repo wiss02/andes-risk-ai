@@ -49,3 +49,48 @@ document.getElementById("reset").addEventListener("click", () => {
   update();
 });
 update();
+
+// Reference basemap only: no hazard layers, observations, or predictions are implied.
+function initializeReferenceMap() {
+  const mapElement = document.getElementById("map");
+  const status = document.getElementById("map-status");
+  if (!mapElement || !status) return;
+  const placeholder = mapElement.querySelector(".map-placeholder");
+  if (typeof L === "undefined") {
+    document.querySelectorAll("[data-map-view]").forEach(button => { button.disabled = true; });
+    status.textContent = "No se pudo cargar el mapa. Comprueba tu conexión e inténtalo de nuevo.";
+    status.dataset.state = "error";
+    return;
+  }
+
+  const map = L.map(mapElement, { scrollWheelZoom: false }).setView([-16.7, -64.7], 5);
+  const tiles = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+  });
+  let loaded = false;
+  tiles.on("tileload", () => {
+    loaded = true;
+    if (placeholder) placeholder.hidden = true;
+    status.textContent = "Mapa base de referencia · sin capas científicas conectadas";
+    status.dataset.state = "ready";
+  });
+  tiles.on("tileerror", () => {
+    if (!loaded) {
+      status.textContent = "No se pudieron cargar los mosaicos del mapa. Comprueba tu conexión.";
+      status.dataset.state = "error";
+    }
+  });
+  tiles.addTo(map);
+  document.querySelectorAll("[data-map-view]").forEach(button => {
+    button.addEventListener("click", () => {
+      const isLaPaz = button.dataset.mapView === "lapaz";
+      map.setView(isLaPaz ? [-16.5, -68.15] : [-16.7, -64.7], isLaPaz ? 11 : 5);
+      document.querySelectorAll("[data-map-view]").forEach(item => {
+        item.setAttribute("aria-pressed", String(item === button));
+      });
+    });
+  });
+}
+initializeReferenceMap();
+
