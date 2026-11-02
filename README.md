@@ -24,7 +24,7 @@
 | Validación CSV y regresión logística de referencia | Comparación con datos de eventos verificados |
 | División temporal entrenamiento/prueba | Validación espacial, calibración e incertidumbre |
 | Métricas y pruebas de software | Agentes auditores y análisis geoespacial |
-| Página interactiva estática en Render | Mapas científicos contrastados por expertos |
+| Página interactiva estática y mapa base geográfico en Render | Capas y mapas científicos contrastados por expertos |
 
 **Los objetivos futuros no son funciones terminadas.**
 
@@ -60,7 +60,7 @@ The initial version is a **software-methodology demonstrator using entirely synt
 - Report confusion-matrix counts, accuracy, precision, recall, F1, false-alarm rate, and Brier score against a constant baseline.
 - Run unit tests in GitHub Actions.
 
-There is **no satellite download, real event catalog, map, validated landslide prediction, or AI-agent orchestration yet**. These are research milestones, not delivered capabilities.
+The web interface includes a geographic reference basemap; it does not contain hazard layers. There is **no satellite download, real event catalog, validated landslide prediction, or AI-agent orchestration yet**. These are research milestones, not delivered capabilities.
 
 ## Quick start / Inicio rápido
 
@@ -106,3 +106,4 @@ A future proposal for Google Antigravity must disclose the actual research affil
 ## License
 
 MIT — see [LICENSE](LICENSE). External datasets remain subject to their own terms and attribution requirements.
+
