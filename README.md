@@ -1,3 +1,11 @@
+## Demo web y publicación en Render
+
+Sitio estático interactivo disponible en `public/`; contiene exclusivamente un simulador de variables sintéticas y nunca representa una predicción operativa.
+
+[Publicar en Render](https://render.com/deploy?repo=https://github.com/wiss02/andes-risk-ai)
+
+Al iniciar el despliegue, revisa el servicio `andes-risk-ai` y aprueba su creación en tu cuenta Render. La configuración está en `render.yaml`, que publica la carpeta `public`. Un sitio Render solo tendrá URL pública después de que se apruebe y finalice la implementación.
+
 # ANDES-RISK AI
 
 **Independent, non-commercial research prototype for rainfall-related landslide analysis in Bolivia.**
